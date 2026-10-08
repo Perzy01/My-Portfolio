@@ -1,0 +1,317 @@
+    /* =========================
+       GENERAL
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1e3c72;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #1e3c72;
+      color: white;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 25px;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section,
+    article,
+    aside {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    section {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    section h1,
+    article h1,
+    aside h1 {
+      color: #1e3c72;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       PROFILE IMAGE
+    ========================= */
+
+    section img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 6px solid #2a5298;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+      transition: 0.3s;
+    }
+
+    section img:hover {
+      transform: scale(1.05);
+    }
+
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+    article {
+      min-height: 250px;
+    }
+
+    article p {
+      color: #555;
+    }
+
+
+    /* =========================
+       ASIDE
+    ========================= */
+
+    aside {
+      min-height: 250px;
+    }
+
+    aside h1 {
+      margin-top: 20px;
+    }
+
+    aside h1:first-child {
+      margin-top: 0;
+    }
+
+
+    /* =========================
+       VIDEO
+    ========================= */
+
+    video {
+      width: 100%;
+      max-width: 500px;
+
+      display: block;
+      margin: 15px auto;
+
+      border-radius: 12px;
+
+      background: #000;
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* =========================
+       AUDIO
+    ========================= */
+
+    audio {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+
+      border: none;
+      border-radius: 8px;
+
+      background: #f4f6f8;
+      font-size: 15px;
+    }
+
+    form textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+
+      border: none;
+      border-radius: 8px;
+
+      background: #2a5298;
+      color: white;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #16365f;
+    }
+
+
+    /* =========================
+       MOBILE RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 40px 15px;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      main {
+        display: block;
+        margin: 25px auto;
+      }
+
+      section,
+      article,
+      aside {
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      section img {
+        width: 170px;
+        height: 170px;
+      }
+
+      video {
+        width: 100%;
+      }
+    }
